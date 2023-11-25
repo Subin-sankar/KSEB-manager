@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint System</title>
+    <link rel="stylesheet" href="css/user_home_style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Complaint System</h1>
+
+        <div class="button-container">
+            <button class="complaint-button" onclick="reportComplaint()">Report Complaint</button>
+            <a class="status-link" href="complaint_status.html">Complaint Status</a>
+            <button class="logout-button" onclick="logOut()">Log Out</button>
+        </div>
+    </div>
+
+    <script>
+        function reportComplaint() {
+            window.location.href = 'complaint_registration.html';
+            
+        }
+
+        function logOut() {
+            alert("Logging out...");
+            
+        }
+    </script>
+
+</body>
+
+</html>

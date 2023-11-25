@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Complaint Form</title>
+    <link rel="stylesheet" type="text/css" href="css/compliantStyle.css">
+</head>
+
+<body>
+
+    
+    <div class="complaintForm">
+            <div class="headder">
+                <h1>Report a complaint </h1>
+            </div>
+        <form action="submit" method="post">
+
+            <div class="form-div">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br>
+            </div>
+            <div class="form-div">
+
+                <label for="consumerNumber">Consumer Number:</label>
+
+                <input type="text" id="consumerNumber" name="consumerNumber" required><br>
+            </div>
+            <div class="form-div">
+
+                <label for="consumerName">Consumer Name:</label>
+                <input type="text" id="consumerName" name="consumerName" required><br>
+            </div>
+            <div class="form-div">
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br>
+            </div>
+            <div class="form-div">
+
+                <label for="postNumber">Post Number:</label>
+                <input type="text" id="postNumber" name="postNumber" required><br>
+            </div>
+            <div class="form-div">
+
+                <label for="complaintDescription">Complaint Description:</label><br>
+                <textarea id="complaintDescription" name="complaintDescription" rows="4" required></textarea><br>
+            </div>
+            <div class="form-div">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 285px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.complaint-button,
+.logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.complaint-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.logout-button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+}
+
+.status-link {
+    text-decoration: none;
+    color: #3498db;
+    margin: 10px;
+    font-size: 16px;
+}

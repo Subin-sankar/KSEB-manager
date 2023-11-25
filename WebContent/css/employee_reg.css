@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(40, 40, 40, 0.726);
+
+}
+.headder{
+    color:black;
+	padding:5px;
+    padding-left: 55px;
+	position:relative;
+	top: -71px;
+}
+input[type=text],textarea,[type=date] {
+    width: 300px;
+    height: 25px;
+    border: 1px solid;
+    border-color: #99A3A4;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.employeeDetails {
+
+    width: 390px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    background: #FDFEFE;
+    border-radius: 15px;
+    padding: 130px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.form-div input,label {
+    width: 50%;
+    padding-bottom: 10px;
+
+}
+.form-div textarea{
+    width: 50%;
+    padding-bottom: 40px;
+
+}
+
+.form-div input[type=submit] {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: #26d9ac;
+    border: 1px solid;
+    border-color: #70d9e3;
+    border-radius: 5px;
+    height: 46px;
+}

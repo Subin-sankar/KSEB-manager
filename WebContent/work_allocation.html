@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Work Allocation</title>
+	<link rel="stylesheet" href="css/work_allocation_style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h2>Work Allocation Form</h2>
+		<form id="workAllocationForm" action="WorkAllocation" method="post">
+			<label for="date">Date:</label>
+			<input type="date" id="date" name="date" required>
+
+			<label for="complaintNo">Complaint No:</label>
+			<select id="complaintNo" name="complaintNo" required>
+
+			</select>
+
+			<label for="lineMan">Line Man:</label>
+			<select id="lineMan" name="lineMan" required>
+
+			</select>
+
+			<button type="submit" onclick="allocateWork()">Allocate Work</button>
+		</form>
+
+
+		
+	</div>
+
+	<script>
+
+		function allocateWork() {
+			var form = document.getElementById("workAllocationForm");
+			var formData = new FormData(form);
+
+			fetch("WorkAllocationServlet", {
+				method: "POST",
+				body: formData
+			})
+				.then(response => response.json())
+				.then(data => {
+					// Display the inserted data in the table
+					var table = document.getElementById("insertedDataTable");
+
+					// Clear existing rows
+					while (table.rows.length > 1) {
+						table.deleteRow(1);
+					}
+
+					// Populate the table with new data
+					data.forEach(rowData => {
+						var row = table.insertRow(table.rows.length);
+						Object.values(rowData).forEach(value => {
+							var cell = row.insertCell(row.cells.length);
+							cell.innerHTML = value;
+						});
+					});
+				})
+				.catch(error => console.error("Error:", error));
+
+			
+
+		}
+	</script>
+</body>
+
+</html>
